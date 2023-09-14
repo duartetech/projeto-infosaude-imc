@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+    background-color: #F5F5F5;
+    margin-top: 2%;
+    }
+#titulo { 
+  font-family: impact;
+  text-align: center;
+}
+#subtitulo { 
+  text-align: center;
+  font-size: 20px;
+  font-family: Verdana;
+  font-style: italic;
+}
+#areaformulario {
+  text-align: center;
+  font-family: Verdana;
+  background-color: #cae3eb;
+  padding: 30px;
+  width: 20%;
+  margin: auto;
+  border-radius: 20px;
+}
+#formulario {
+  text-align: center;
+  margin: auto;
+}
+#submit {
+  text-align: center;
+}
+#result {
+  font-style: italic;
+}
