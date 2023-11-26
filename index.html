@@ -1,37 +1,208 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> Trabalho Des. Web </title>
-        <link rel="stylesheet" type="text/css" href="styles.css">
-        <script src="scripts.js"></script>
-    </head>
-    <body>
-        <div>
-                <h1 id="titulo">TITULO DA PÁGINA</h1>
-                <p id="subtitulo">Calcule seu IMC</p>
-       </div>
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Info-Saúde</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="script.js"></script>
+
+</head>
+
+<body>
+
+  <header>
+    <h1 id="titulo"><img src="imagens/icon.png" height="50" alt="Logotipo da Página"><br>INFO-SAÚDE</h1>
+  </header>
+  <main>
+    <div>
+      <h2 class="centralizar">O que é IMC?</h2><br>
+      <p class="justificar">
+        Índice de Massa Corporal (IMC) é um cálculo que permite medir se uma pessoa está, ou não, com o peso ideal. É
+        usado por profissionais da saúde incluindo profissionais de educação física, médicos, enfermeiros e
+        nutricionistas para saber, de uma forma rápida, se a pessoa está com o peso adequado ou se precisa ganhar ou
+        perder peso.<br>
+      </p>
+      <br>
+      <h2 class="centralizar">Cálculo do IMC.</h2><br>
+      <p class="justificar">
+        A fórmula para calcular o IMC é: <b>peso (kg) ÷ (altura x altura) (m).</b><br>
+        O cálculo é feito com base na relação entre a sua altura e o seu peso, é possível descobrir se você está acima
+        do peso, abaixo ou dentro da média ideal para seu corpo. O método é reconhecido pela Organização Mundial da
+        Saúde (OMS).
+      </p><br><br>
+    </div>
+    <h2 class="centralizar">Calcule seu IMC.</h2><br>
+    <div id="calculadoraimc" class="conteiner">
+      <div id="formulario" class="bloco-1">
         <br>
-        <div id="areaformulario">
-            <form>
-                <div id="formulario">
-                    <label for="idade">Idade:</label>
-                    <input type="number" name="idade" id="idade" size="20" placeholder="Exemplo: 18">
-                    <br>
-                    <label for="altura">Altura:</label>
-                    <input type="number" name="altura" id="altura" size="20" placeholder="Exemplo: 1.70">
-                    <br>
-                    <label for="peso">Peso:</label>
-                    <input type="number" name="peso" id="peso" size="20" placeholder="Exemplo: 72">
-                    <br><br>
-                </div>
-                <button type="button" onclick="calcularIMC()">Calcular</button>
-                <br><br> 
-                <p id="result">
-                    Seu IMC é:
-                </p>     
-            </form>
+        <form>
+          <label for="altura">Altura:</label>
+          <input type="number" name="altura" id="altura" placeholder="Exemplo: 1.70">
+          <br>
+          <label for="peso">Peso:</label>
+          <input type="number" name="peso" id="peso" placeholder="Exemplo: 72">
+          <br><br>
+          <button type="button" id="botao" onclick="calcularIMC()">CALCULAR</button>
+        </form>
+      </div>
+      <div class="bloco-2"></div>
+      <div id="resultado" class="bloco-3">
+        <b>Resultado:</b><br>
+        <div style="font-size:16px">
+          Altura: <span id="returnaltura"> </span> m<br>
+          Peso: <span id="returnpeso"> </span> kg<br>
+          Seu IMC é: <span id="returnimc"> </span> <br>
+          <span id="mensagemimc"> </span><br>
+          <span id="mensagempeso"> </span>
         </div>
-    </body>
+      </div>
+    </div>
+    <br><br>
+    <div id="info" style="display: none">
+      <h2 class="centralizar">
+        Confira seus resultados.<br>
+      </h2><br>
+      <table class="centralizar">
+        <tr>
+          <th>IMC</th>
+          <th>Níveis de Obesidade</th>
+          <th>Problemas de Saúde</th>
+        </tr>
+        <tr id="baixopeso">
+          <td>&lt; 18,5</td>
+          <td>Baixo peso</td>
+          <td>Peso baixo para a altura. Maior probabilidade de anorexia.</td>
+        </tr>
+        <tr id="pesonormal">
+          <td>18,5 - 24,9</td>
+          <td>Peso Normal</td>
+          <td>Maior probabilidade de ser um indivíduo saudável.</td>
+        </tr>
+        <tr id="preobesidade">
+          <td>25 - 29,9</td>
+          <td>Pré-obesidade</td>
+          <td>Alguma probabilidade de problemas de saúde. Predisposição a tornar-se obeso. </td>
+        </tr>
+        <tr id="grauI">
+          <td>30 - 34,9</td>
+          <td>Obesidade Grau I</td>
+          <td>Risco Moderado de diabetes tipo II, hipertensão, colesterol, cardiopatia.</td>
+        </tr>
+        <tr id="grauII">
+          <td>35 - 39,9</td>
+          <td>Obesidade Grau II</td>
+          <td>Risco Grave. Aumenta o risco das doenças associadas. O risco de mortalidade aumenta 50%.</td>
+        </tr>
+        <tr id="grauIII">
+          <td>&gt; 40</td>
+          <td>Obesidade Grau III ou obesidade mórbida</td>
+          <td>Risco Muito Grave. O Risco de doenças associadas assim como a mortalidade aumenta 90%.</td>
+        </tr>
+      </table><br>
+
+      <br>
+      <h2 class="centralizar">Sobre o IMC.</h2>
+      <div class="container2" onclick="toggleText(1)">
+        <figure>
+          <figcaption>Clique para mais informações.</figcaption><br>
+          <img src="imagens/exclamacao.png" alt="Imagem 1"
+            style="width: 90%; height: auto; transition: transform 0.3s; border-radius: 10px;">
+
+        </figure>
+      </div>
+
+      <div class="text text-1">
+        <h2>Informações importantes!</h2><br>
+        <p class="justificar">Embora o Índice de Massa Corporal (IMC) seja amplamente empregado para avaliar se alguém
+          está com excesso de peso ou não, esse método apresenta algumas limitações. O principal problema é que ele não
+          indica a distribuição da gordura no corpo, um fator principal para avaliar o sobrepeso. Além desse problema, o
+          IMC não consegue indicar a relação entre massa gorda e magra.<br>
+          Portanto, o IMC não é indicado em alguns casos, como o de grávidas (pois não considera o crescimento do bebê),
+          atletas (não leva em consideração o peso dos músculos), pessoas com distúrbios alimentares, idosos (não
+          considera a redução natural dos músculos), entre outros.
+        </p><br>
+      </div>
+
+      <h2 class="centralizar"> Precisa diminuir seu IMC?</h2>
+      <div class="container2" onclick="toggleText(2)">
+        <figure>
+          <figcaption>Clique para mais informações.</figcaption><br>
+          <img src="imagens/imcalto.png" alt="Imagem 2"
+            style="width: 150%; height: auto; transition: transform 0.3s; border-radius: 10px;">
+        </figure>
+      </div>
+
+      <div class="text text-2">
+        <br>
+        <h2>Dicas de como baixar o IMC.</h2><br>
+        <p class="justificar">A combinação de uma dieta saudável, priorizando frutas, vegetais, proteínas magras e
+          cereais integrais, e atividades físicas, exercícios para aumentar o gasto calórico, é maneira mais eficaz de
+          evitar o sobrepeso e a obesidade.<br>
+          <br><b>Reduza a Ingestão de Calorias:</b> Consumir menos calorias do que você gasta é fundamental para perder
+          peso. Isso pode ser feito reduzindo o tamanho das porções e evitando alimentos ricos em calorias vazias, como
+          alimentos processados e fast food.<br>
+
+          <br><b>Coma Alimentos Nutritivos:</b> Priorize alimentos ricos em nutrientes, como frutas, legumes, grãos
+          integrais, proteínas magras (peito de frango, peixe, legumes) e laticínios com baixo teor de gordura. Evite
+          excesso de açúcares e gorduras saturadas.<br>
+
+          <br><b>Controle as Porções:</b> Prestando atenção às porções, você pode evitar o excesso de calorias. Use
+          pratos menores, leia os rótulos dos alimentos e evite comer diretamente da embalagem.<br>
+
+          <br><b>Exercício Aeróbico:</b> Atividades como caminhada, corrida, natação e ciclismo ajudam a queimar
+          calorias e melhorar a saúde cardiovascular.<br>
+
+          <br><b>Treinamento de Força:</b> Musculação ou treinamento de resistência ajuda a construir massa muscular,
+          que queima mais calorias em repouso e ajuda a aumentar o metabolismo.<br>
+
+          <br><b>Exercícios de Flexibilidade:</b> Inclua exercícios de alongamento para melhorar a flexibilidade e
+          prevenir lesões.
+          Importante salientar que é imprescindível uma orientação profissional para resultados mais seguros e
+          eficientes.
+
+        </p><br>
+      </div>
+
+      <h2 class="centralizar">Precisa aumentar seu IMC??</h2>
+      <div class="container2" onclick="toggleText(3)">
+        <figure>
+          <figcaption>Clique para mais informações.</figcaption><br>
+          <img src="imagens/imcbaixo.jpg" alt="Imagem 3"
+            style="width: 142%; height: auto; transition: transform 0.3s; border-radius: 10px;">
+        </figure>
+      </div>
+
+      <div class="text text-3">
+        <br>
+        <h2>Dicas de como aumentar o IMC.</h2><br>
+        <p class="justificar">Se o resultado do IMC estiver abaixo do ideal, é recomendado aumentar a ingestão de
+          calorias para ganhar peso e massa muscular. <br>
+          <br><b>Refeições Frequentes:</b> Faça refeições mais frequentes ao longo do dia. Coma pequenas porções a cada
+          2-3 horas para manter um fornecimento constante de nutrientes.<br>
+
+          <br><b>Aumento Calórico Controlado:</b> Para aumentar o IMC, você precisa consumir mais calorias do que
+          queima. No entanto, isso deve ser feito de forma controlada para evitar o ganho
+          excessivo de gordura. Adicione calorias extras, principalmente de fontes saudáveis, como proteínas magras,
+          grãos integrais, gorduras saudáveis (abacate, nozes) e alimentos ricos em fibras. <br>
+
+          <br><b>Suplementos Nutricionais:</b> Em casos de dificuldade em ganhar peso, podem ser considerados
+          suplementos nutricionais úteis, como shakes de proteína ou suplementos hipercalóricos, mas sempre
+          sob orientação de um profissional de saúde.<br>
+
+          <br><b>Treinamento de Força:</b>O treinamento de resistência é fundamental para ganhar massa muscular. Realize
+          exercícios como levantamento de peso, agachamentos,
+          supino e outras atividades que visem diferentes grupos musculares.<br>
+
+          <br><b>Cardio Moderado:</b> Não elimine o exercício cardiovascular, mas mantenha-o em níveis moderados para
+          evitar queimaduras muitas calorias.<br>
+
+          <br><b>Treinamento de Hipertrofia:</b> Concentre-se em exercícios que promovam o crescimento muscular, com
+          séries e repetições adequadas. Também é imprescindível a orientação profissional.<br>
+        </p>
+      </div>
+    </div>
+  </main>
+</body>
 </html>
