@@ -196,27 +196,27 @@ tr:nth-child(1) {
 }
 
 tr:nth-child(2) {
-  background: linear-gradient(to bottom, #0b0b64, #0b4364,#0A5F91,#13d169);
+  background-color:#4169E1; 
 }
 
 tr:nth-child(3) {
-  background: linear-gradient(to bottom, #13d169,#00FF00,#00FF00, #99eb14);
+  background-color: #00FF00; 
 }
 
 tr:nth-child(4) {
-  background: linear-gradient(to bottom,#99eb14, #b3ff00,#fff200, #fff200);
+  background-color: #FFFF00; 
 }
 
 tr:nth-child(5) {
-  background: linear-gradient(to bottom, #fff200,#ffc400, #ffb600);
+  background-color: #FFD700; 
 }
 
 tr:nth-child(6) {
-  background: linear-gradient(to bottom, #ffb600, #ff9100, #ff6800);
+  background-color: #FF8C00;
 }
 
 tr:nth-child(7) {
-  background: linear-gradient(to bottom, #ff6800, #ff4500,#ff0800);
+  background-color: #FF4500;
 }
 
 .DestaqueTabela {
