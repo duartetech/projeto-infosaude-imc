@@ -17,7 +17,7 @@ body {
 
 header{
   margin: auto;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   width: 760px;
   text-align: center;
 }
@@ -229,4 +229,8 @@ text-shadow:
 -1px 1px 0 black,
  1px 1px 0 black; 
 
-} 
+}
+
+footer{
+  padding: 10px;
+}
