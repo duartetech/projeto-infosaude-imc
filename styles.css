@@ -232,5 +232,8 @@ text-shadow:
 }
 
 footer{
-  padding: 10px;
+  padding: 15px;
+  font-size: 13px;
+  color: black;
+  font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
 }
