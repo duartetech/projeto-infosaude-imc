@@ -3,7 +3,11 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=0.5">
+  <meta name="description" content="Calculadora de IMC e informações sobre saúde. Descubra seu Índice de Massa Corporal e aprenda sobre seu impacto na saúde.">
+  <meta name="author" content="Lucas Duarte, Lara Stefanny, Gabriel Mendes, João
+  Marcos, Isaac de Matos">
+  <link rel="icon" href="imagens/icone.ico" type="image/x-icon">
   <title>Info-Saúde</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
   <script src="script.js"></script>
@@ -13,7 +17,7 @@
 <body>
 
   <header>
-    <h1 id="titulo"><img src="imagens/icon.png" height="50" alt="Logotipo da Página"><br>INFO-SAÚDE</h1>
+    <img src="imagens/logo.png" height="100" alt="Logotipo da Página">
   </header>
   <main>
     <div>
@@ -31,7 +35,7 @@
         O cálculo é feito com base na relação entre a sua altura e o seu peso, é possível descobrir se você está acima
         do peso, abaixo ou dentro da média ideal para seu corpo. O método é reconhecido pela Organização Mundial da
         Saúde (OMS).
-      </p><br><br>
+      </p><br>
     </div>
     <h2 class="centralizar">Calcule seu IMC.</h2><br>
     <div id="calculadoraimc" class="conteiner">
@@ -53,7 +57,7 @@
         <div style="font-size:16px">
           Altura: <span id="returnaltura"> </span> m<br>
           Peso: <span id="returnpeso"> </span> kg<br>
-          Seu IMC é: <span id="returnimc"> </span> <br>
+          Seu IMC é: <span id="returnimc"></span> <br>
           <span id="mensagemimc"> </span><br>
           <span id="mensagempeso"> </span>
         </div>
@@ -106,10 +110,9 @@
       <h2 class="centralizar">Sobre o IMC.</h2>
       <div class="container2" onclick="toggleText(1)">
         <figure>
-          <figcaption>Clique para mais informações.</figcaption><br>
           <img src="imagens/exclamacao.png" alt="Imagem 1"
             style="width: 90%; height: auto; transition: transform 0.3s; border-radius: 10px;">
-
+            <figcaption>Clique para mais informações.</figcaption><br>
         </figure>
       </div>
 
@@ -128,10 +131,10 @@
       <h2 class="centralizar"> Precisa diminuir seu IMC?</h2>
       <div class="container2" onclick="toggleText(2)">
         <figure>
-          <figcaption>Clique para mais informações.</figcaption><br>
           <img src="imagens/imcalto.png" alt="Imagem 2"
             style="width: 150%; height: auto; transition: transform 0.3s; border-radius: 10px;">
-        </figure>
+            <figcaption>Clique para mais informações.</figcaption><br>
+          </figure>
       </div>
 
       <div class="text text-2">
@@ -168,10 +171,11 @@
       <h2 class="centralizar">Precisa aumentar seu IMC??</h2>
       <div class="container2" onclick="toggleText(3)">
         <figure>
-          <figcaption>Clique para mais informações.</figcaption><br>
+          <br>
           <img src="imagens/imcbaixo.jpg" alt="Imagem 3"
             style="width: 142%; height: auto; transition: transform 0.3s; border-radius: 10px;">
-        </figure>
+            <figcaption>Clique para mais informações.</figcaption><br>
+          </figure>
       </div>
 
       <div class="text text-3">
