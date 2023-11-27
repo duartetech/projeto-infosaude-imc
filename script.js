@@ -38,7 +38,7 @@
         mensagemIMC.innerHTML = "Peso abaixo do normal";
         limparDestaqueTabela();
         document.getElementById("baixopeso").classList.add("DestaqueTabela");
-        document.getElementById("returnimc").style.color = "#0b4364"; 
+        document.getElementById("returnimc").style.color = "#2d4ca8"; 
     } else if (imc >= 18.5 && imc <= 24.9) {
         mensagemIMC.innerHTML = "Seu peso está dentro dos padrões";
         limparDestaqueTabela();
