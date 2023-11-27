@@ -28,7 +28,8 @@ main {
   padding: 30px; 
   width: 700px;
   margin: auto; 
-  border-radius: 20px; 
+  border-radius: 20px;
+
 } 
 
 .conteiner { 
@@ -78,7 +79,10 @@ main {
   margin-top: 10px;
   vertical-align: top;
 }
+#returnimc{
+  font-weight: bolder;
 
+}
 
 #altura {
   margin-left: 3px;
@@ -115,7 +119,13 @@ main {
   margin: 3px 1px;
   cursor: pointer;
 }
+#botao:hover {
+  background-color: #00688B;
+}
 
+#botao:active {
+  background-color: #004F63;
+}
 
 .centralizar {
 
@@ -145,8 +155,6 @@ figcaption {
 }
 
 
-          
-
 .container2 {
   width: 300px;
   margin: 10px auto;
@@ -155,17 +163,13 @@ figcaption {
   justify-content: center;
 }
 
-
-
-
 .text {
 display: none;
 text-align: center;
 margin-top: 10px;
 }
 
-
-.container2:hover img {
+.container2:hover img{
 transform: scale(1.1);
 }
 
@@ -192,15 +196,15 @@ tr:nth-child(1) {
 }
 
 tr:nth-child(2) {
-  background: linear-gradient(to bottom, #99cd32, #3eeb14);
+  background: linear-gradient(to bottom, #8ab92b, #98c935,#99cd32, #3eeb14);
 }
 
 tr:nth-child(3) {
-  background: linear-gradient(to bottom, #3eeb14, #8eff00);
+  background: linear-gradient(to bottom, #3eeb14, #3eeb14);
 }
 
 tr:nth-child(4) {
-  background: linear-gradient(to bottom, #8eff00, #fff200);
+  background: linear-gradient(to bottom,#3eeb14, #b3ff00,#fff200, #fff200);
 }
 
 tr:nth-child(5) {
@@ -212,14 +216,12 @@ tr:nth-child(6) {
 }
 
 tr:nth-child(7) {
-  background: linear-gradient(to bottom, #ff6800, #ff4500);
+  background: linear-gradient(to bottom, #ff6800, #ff4500,#ff0800);
 }
 
 .DestaqueTabela {
 color: #ffffff; 
 font-weight: bold; 
-
-
 
 text-shadow:
 -1px -1px 0 black,
