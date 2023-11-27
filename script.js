@@ -38,34 +38,35 @@
         mensagemIMC.innerHTML = "Peso abaixo do normal";
         limparDestaqueTabela();
         document.getElementById("baixopeso").classList.add("DestaqueTabela");
-        document.getElementById("returnimc").style= "color: #678b1f;"
+        document.getElementById("returnimc").style.color = "#0b4364"; 
     } else if (imc >= 18.5 && imc <= 24.9) {
         mensagemIMC.innerHTML = "Seu peso está dentro dos padrões";
         limparDestaqueTabela();
         document.getElementById("pesonormal").classList.add("DestaqueTabela");
-        document.getElementById("returnimc").style= "color: #00FF00;"
+        document.getElementById("returnimc").style.color = "#32CD32"; 
         pesoideal = true; // Se o peso está dentro do padrão, será verdadeiro
     } else if (imc >= 25 && imc <= 29.9) {
         mensagemIMC.innerHTML = "Você está com Pré-obesidade";
         limparDestaqueTabela();
         document.getElementById("preobesidade").classList.add("DestaqueTabela");
-        document.getElementById("returnimc").style= "color: #FFFF00;"
+        document.getElementById("returnimc").style.color = "#fec300";
     } else if (imc >= 30 && imc <= 34.9) {
         mensagemIMC.innerHTML = "Você tem Obesidade Grau I";
         limparDestaqueTabela();
         document.getElementById("grauI").classList.add("DestaqueTabela");
-        document.getElementById("returnimc").style= "color: #FFD700;"
+        document.getElementById("returnimc").style.color = "#fe6200"; 
     } else if (imc >= 35 && imc <= 39.9) {
         mensagemIMC.innerHTML = "Você tem Obesidade Grau II";
         limparDestaqueTabela();
         document.getElementById("grauII").classList.add("DestaqueTabela");
-        document.getElementById("returnimc").style= "color: #FF8C00;"
+        document.getElementById("returnimc").style.color = "#ff3001"; 
     } else if (imc >= 40) {
         mensagemIMC.innerHTML = "Você tem Obesidade Grau III ou obesidade mórbida.";
         limparDestaqueTabela();
         document.getElementById("grauIII").classList.add("DestaqueTabela");
-        document.getElementById("returnimc").style= "color: #ff0800;"
+        document.getElementById("returnimc").style.color = "#c61616";
     }
+    
 
     var mensagemPeso = document.getElementById("mensagempeso"); // Elemento HTML para exibir a mensagem sobre o peso ideal
 
