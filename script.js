@@ -88,8 +88,8 @@
     }
   }
 
-window.onload = function() {
-    document.getElementById("ano").innerHTML = new Date().getFullYear();
-}
+
+document.getElementById("ano").innerHTML = new Date().getFullYear();
+
 
 
