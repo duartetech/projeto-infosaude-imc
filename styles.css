@@ -233,12 +233,15 @@ footer{
 }
 
 
-a {
+a:link {
   text-decoration: none;
   font-weight: bold;
   color: rgb(0, 89, 255);
 }
 
+a:visited{
+  color: rgb(125, 24, 172);
+}
 
 a:hover {
   color: #1a2879; 
@@ -246,6 +249,6 @@ a:hover {
 
 
 a:active {
-  color: #00d9ff; 
+  color: #0acdf0; 
 }
 
