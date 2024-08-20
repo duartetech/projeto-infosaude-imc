@@ -17,12 +17,12 @@
 
     // Exibe o resultado na página HTML
     document.getElementById("resultado").style.display = "block"; // ativa a div com id #resultado como um elemento block
-    document.getElementById("returnaltura").innerHTML = altura; // retorna o valor da altura pro span com #returnaltura no html
-    document.getElementById("returnpeso").innerHTML = peso; // retorna o valor peso pro span com #returnpeso no html
-    document.getElementById("returnimc").innerHTML = imc; // retorna o resultado do cálculo IMC pro span com #returnimc no html
+    document.getElementById("retornaAltura").innerHTML = altura; // retorna o valor da altura pro span com #returnaltura no html
+    document.getElementById("retornaPeso").innerHTML = peso; // retorna o valor peso pro span com #returnpeso no html
+    document.getElementById("retornaImc").innerHTML = imc; // retorna o resultado do cálculo IMC pro span com #returnimc no html
     document.getElementById("info").style.display = "block"; // ativa a div #info que possui elementos da tabela de imc e demais informações
 
-    var mensagemIMC = document.getElementById("mensagemimc"); // Elemento HTML para exibir a mensagem sobre o IMC
+    var mensagemIMC = document.getElementById("mensagemImc"); // Elemento HTML para exibir a mensagem sobre o IMC
 
     function limparDestaqueTabela() {
         document.getElementById("baixopeso").classList.remove("DestaqueTabela");
@@ -37,38 +37,38 @@
     if (imc < 18.5) {
         mensagemIMC.innerHTML = "Peso abaixo do normal";
         limparDestaqueTabela();
-        document.getElementById("baixopeso").classList.add("DestaqueTabela");
-        document.getElementById("returnimc").style.color = "#2d4ca8"; 
+        document.getElementById("baixoPeso").classList.add("DestaqueTabela");
+        document.getElementById("retornaImc").style.color = "#2d4ca8"; 
     } else if (imc >= 18.5 && imc <= 24.9) {
         mensagemIMC.innerHTML = "Seu peso está dentro dos padrões";
         limparDestaqueTabela();
-        document.getElementById("pesonormal").classList.add("DestaqueTabela");
-        document.getElementById("returnimc").style.color = "#32CD32"; 
+        document.getElementById("pesoNormal").classList.add("DestaqueTabela");
+        document.getElementById("retornaImc").style.color = "#32CD32"; 
         pesoideal = true; // Se o peso está dentro do padrão, será verdadeiro
     } else if (imc >= 25 && imc <= 29.9) {
         mensagemIMC.innerHTML = "Você está com Pré-obesidade";
         limparDestaqueTabela();
-        document.getElementById("preobesidade").classList.add("DestaqueTabela");
-        document.getElementById("returnimc").style.color = "#fec300";
+        document.getElementById("preObesidade").classList.add("DestaqueTabela");
+        document.getElementById("retornaImc").style.color = "#fec300";
     } else if (imc >= 30 && imc <= 34.9) {
         mensagemIMC.innerHTML = "Você tem Obesidade Grau I";
         limparDestaqueTabela();
         document.getElementById("grauI").classList.add("DestaqueTabela");
-        document.getElementById("returnimc").style.color = "#fe6200"; 
+        document.getElementById("retornaImc").style.color = "#fe6200"; 
     } else if (imc >= 35 && imc <= 39.9) {
         mensagemIMC.innerHTML = "Você tem Obesidade Grau II";
         limparDestaqueTabela();
         document.getElementById("grauII").classList.add("DestaqueTabela");
-        document.getElementById("returnimc").style.color = "#ff3001"; 
+        document.getElementById("retornaImc").style.color = "#ff3001"; 
     } else if (imc >= 40) {
         mensagemIMC.innerHTML = "Você tem Obesidade Grau III ou obesidade mórbida.";
         limparDestaqueTabela();
         document.getElementById("grauIII").classList.add("DestaqueTabela");
-        document.getElementById("returnimc").style.color = "#c61616";
+        document.getElementById("retornaImc").style.color = "#c61616";
     }
     
 
-    var mensagemPeso = document.getElementById("mensagempeso"); // Elemento HTML para exibir a mensagem sobre o peso ideal
+    var mensagemPeso = document.getElementById("mensagemPeso"); // Elemento HTML para exibir a mensagem sobre o peso ideal
 
     // Define a mensagem de peso ideal, se a variável pesoideal for falsa
     if (!pesoideal) {
